@@ -6,7 +6,7 @@ class MainKtTest {
     @Test
     fun shouldCalculateCommissionForDefaultParameters() {
         val result = calculateCommission(amount = 15000.0)
-        assertEquals(10.0, result, 0.0)
+        assertEquals(0.0, result, 0.0)
     }
 
     @Test(expected = IllegalArgumentException::class)
