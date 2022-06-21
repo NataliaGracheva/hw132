@@ -2,31 +2,6 @@ import kotlin.math.roundToInt
 
 fun main() {
     println(calculateCommission(amount = 15000.0))
-    println(calculateCommission("Vk Pay", 25000.0, 15000.0))
-    try {
-        println(calculateCommission(totalAmount = 25001.0, amount = 15000.0))
-    } catch (e: IllegalArgumentException) {
-        println(e)
-    }
-    try {
-        println(calculateCommission(totalAmount = 0.0, amount = 15001.0))
-    } catch (e: IllegalArgumentException) {
-        println(e)
-    }
-    try {
-        println(calculateCommission("UnionPay", 0.0, 1000.0))
-    } catch (e: IllegalArgumentException) {
-        println(e)
-    }
-    println(calculateCommission("Mastercard", 74000.0, 1000.0))
-    println(calculateCommission("Maestro", 74001.0, 1000.0))
-    println(calculateCommission("Visa", 0.0, 1000.0))
-    println(calculateCommission("Mir", 0.0, 4700.0))
-    try {
-        println(calculateCommission("Mastercard", 599001.0, 1000.0))
-    } catch (e: IllegalArgumentException) {
-        println(e)
-    }
 }
 
 fun calculateCommission(accountType: String = "Vk Pay", totalAmount: Double = 0.0, amount: Double): Double {
